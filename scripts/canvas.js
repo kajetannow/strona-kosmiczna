@@ -73,6 +73,5 @@ for (let i=0; i<16; i++){
     let rI = 3+rd(5);
     drawStar(x,y,n,rO,rI);
 }
-//drawStar(100,100,10,30,15);
 
 drawPacman();

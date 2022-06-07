@@ -6,24 +6,30 @@ function setCookie(visits=0){
     document.cookie = `${COOKIE_NAME}=${visits};expires=${date.toUTCString()}`;
 }
 
-setCookie();
+//setCookie();
 
 function getCookie(){
     let decoded = decodeURIComponent(document.cookie);
     console.log(decoded);
-    decoded = decoded.split(';');
-    let decodedObj = {};
-    for(let i=0; i<decoded.length; i++){
-        let div = decoded[i].indexOf("=");
-        let key = decoded[i].substring(0,div);
-        let val = decoded[i].substring(div+1, decoded[i].length);
-        decodedObj[key]=val;
+    if(decoded){
+        decoded = decoded.split(';');
+        let decodedObj = {};
+        for(let i=0; i<decoded.length; i++){
+            let div = decoded[i].indexOf("=");
+            let key = decoded[i].substring(0,div);
+            let val = decoded[i].substring(div+1, decoded[i].length);
+            decodedObj[key]=val;
+        }
+        console.log(decodedObj);
+        return decodedObj;
     }
-    console.log(decodedObj);
-    return decodedObj;
+    return null
 }
 
-getCookie();
+if(!getCookie()){
+    setCookie();
+    getCookie();
+}
 
 function checkCookie(){
     let cookie = getCookie();
