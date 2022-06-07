@@ -5,7 +5,6 @@ function setCookie(visits=0){
     date.setTime(Date.now() + 2*24*60*60*1000)
     document.cookie = `${COOKIE_NAME}=${visits};expires=${date.toUTCString()}`;
 }
-
 //setCookie();
 
 function getCookie(){
