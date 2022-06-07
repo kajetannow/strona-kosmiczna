@@ -32,7 +32,7 @@ stars.push(new Star("Alfa Canis Majoris B", 8.60, "DA1,9", 11.32, 1844));
 stars.push(new Star("BL Ceti", 8.82, "M5,5V", 15.54, 1949));
 stars.push(new Star("UV Ceti", 8.82, "M6V", 16.05, 1949));
 
-console.log(stars)
+//console.log(stars)
 function showTable(arr){
     let txt = ""
     txt+="<tr>";
