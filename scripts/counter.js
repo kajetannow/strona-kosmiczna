@@ -10,7 +10,7 @@ function setCookie(visits=0){
 
 function getCookie(){
     let decoded = decodeURIComponent(document.cookie);
-    console.log(decoded);
+    //console.log(decoded);
     if(decoded){
         decoded = decoded.split(';');
         let decodedObj = {};
@@ -20,7 +20,7 @@ function getCookie(){
             let val = decoded[i].substring(div+1, decoded[i].length);
             decodedObj[key]=val;
         }
-        console.log(decodedObj);
+        //console.log(decodedObj);
         return decodedObj;
     }
     return null
