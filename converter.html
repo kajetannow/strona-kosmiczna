@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konwerter odległości kątowej</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Strona Kosmiczna</h1>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="newsletter.html">Newsletter (formularz)</a></li>
+                <li><a href="converter.html">Konwerter</a></li>
+                <li><a href="table.html">Tabelka</a></li>
+                <li><a href="presentation.html">Prezentacja</a></li>
+                <li><a href="canvas.html">Kanwa</a></li>
+                <li><a href="map.html">Mapa</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <section><h1>Obliczanie odległości kątowej</h1>
+            <form>
+                <fieldset>
+                    <legend>Gwiazda 1</legend>
+                    <div>
+                        <label for="r1">rektascencja =</label>
+                        <input type="number" name="r1" id="r1"/>h
+                    </div>
+                    <div>
+                        <label for="d1">deklinacja =</label>
+                        <input type="number" name="d1" id="d1"/>&deg;
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Gwiazda 2</legend>
+                    <div>
+                        <label for="r2">rektascencja =</label>
+                        <input type="number" name="r2" id="r2"/>h
+                    </div>
+                    <div>
+                        <label for="d2">deklinacja =</label>
+                        <input type="number" name="d2" id="d2"/>&deg;
+                    </div>
+                </fieldset>
+                <button class="btn" id="btn-submit">Oblicz odległość</button>
+            </form>
+        
+            <article>
+                <h3 id="display"></h3>
+            </article>
+        </section>
+
+        <aside>
+            <div>
+                <h1 id="date-display"></h1>
+            </div>
+            <div>
+                <h1 id="timer-display"></h1>
+            </div>
+            <div>
+                <h1 id="counter-display"></h1>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>Kajetan Nowak</p>
+        <p>nr. albumu: 149418</p>
+        <p>mail <a href="mailto:kajetan.nowak.1@student.put.poznan.pl">kajetan.nowak.1@student.put.poznan.pl</a></p>
+    </footer>
+    <script src="scripts/counter.js" type="text/javascript"></script>
+    <script src="scripts/clock.js" type="text/javascript"></script>
+    <script src="scripts/date.js" type="text/javascript"></script>
+    <script src="scripts/converter.js" type="text/javascript"></script>
+</body>
+</html>

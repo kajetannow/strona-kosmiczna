@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa letniego nieba</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Strona Kosmiczna</h1>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="newsletter.html">Newsletter (formularz)</a></li>
+                <li><a href="converter.html">Konwerter</a></li>
+                <li><a href="table.html">Tabelka</a></li>
+                <li><a href="presentation.html">Prezentacja</a></li>
+                <li><a href="canvas.html">Kanwa</a></li>
+                <li><a href="map.html">Mapa</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h1>Najjaśniejsze gwiazdy na letnim nocnym niebie</h1>
+            <div class="map-container">
+                <img src="pictures/night-sky.png" usemap="#image-map" id="night-sky">
+
+                <map name="image-map">
+                    <area alt="Arktur" title="Arktur" href="arktur.html" coords="580,365,51" shape="circle">
+                    <area alt="Altair" title="Altair" href="altair.html" coords="337,445,45" shape="circle">
+                    <area alt="Antares" title="Antares" href="antares.html" coords="514,575,52" shape="circle">
+                    <area alt="Wega" title="Wega" href="wega.html" coords="397,363,32" shape="circle">
+                    <area alt="Deneb" title="Deneb" href="deneb.html" coords="337,327,37" shape="circle">
+                    <area alt="Kapella" title="Kapella" href="kapella.html" coords="346,36,50" shape="circle">
+                </map>
+            </div>
+        </section>
+        <aside>
+            <div>
+                <h1 id="date-display"></h1>
+            </div>
+            <div>
+                <h1 id="timer-display"></h1>
+            </div>
+            <div>
+                <h1 id="counter-display"></h1>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>Kajetan Nowak</p>
+        <p>nr. albumu: 149418</p>
+        <p>mail <a href="mailto:kajetan.nowak.1@student.put.poznan.pl">kajetan.nowak.1@student.put.poznan.pl</a></p>
+    </footer>
+    <script src="scripts/counter.js" type="text/javascript"></script>
+    <script src="scripts/clock.js" type="text/javascript"></script>
+    <script src="scripts/date.js" type="text/javascript"></script>
+</body>
+</html>
