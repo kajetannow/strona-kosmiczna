@@ -5,8 +5,11 @@ var can, ctx;
 //}
 
 const {PI} = Math;
+function rd(n=1){
+    return Math.random()*n
+}
 
-function draw(){
+function drawPacman(){
     if(ctx==null)
         ctx = can.getContext("2d");
     ctx.beginPath();
@@ -34,4 +37,42 @@ function draw(){
     ctx.fill();
 }
 
-draw();
+function drawStar(posX, posY, n, rOuter, rInner){
+    if(ctx==null)
+        ctx = can.getContext("2d");
+    var step = PI/n;
+    var rot=Math.PI/2*3;
+    ctx.beginPath();
+    ctx.moveTo(posX, posY-rOuter);
+   
+    for(i=0;i<n;i++){
+        x=posX+Math.cos(rot)*rOuter;
+        y=posY+Math.sin(rot)*rOuter;
+        ctx.lineTo(x,y)
+        rot+=step
+
+        x=posX+Math.cos(rot)*rInner;
+        y=posY+Math.sin(rot)*rInner;
+        ctx.lineTo(x,y)
+        rot+=step
+      }
+      ctx.lineTo(posX, posY-rOuter);
+      ctx.closePath();
+      ctx.lineWidth=5;
+      ctx.strokeStyle='blue';
+      ctx.stroke();
+      ctx.fillStyle='skyblue';
+      ctx.fill();
+}
+
+for (let i=0; i<16; i++){
+    let x = 25+rd(450);
+    let y = 10+rd(280);
+    let n = 3+rd(16);
+    let rO = 10+rd(15)
+    let rI = 3+rd(5);
+    drawStar(x,y,n,rO,rI);
+}
+//drawStar(100,100,10,30,15);
+
+drawPacman();
