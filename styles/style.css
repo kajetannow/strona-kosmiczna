@@ -22,7 +22,7 @@
 }
 
 body {
-  font-family: "Spartan", "Segoe UI", "Roboto", sans-serif;
+  font-family: "League Spartan", "Spartan", "Segoe UI", "Roboto", sans-serif;
   background-color: #201753;
   color: #e6e6e6;
 }
@@ -60,7 +60,7 @@ main {
 }
 
 button, .btn {
-  font-family: "Spartan", "Segoe UI", "Roboto", sans-serif;
+  font-family: "League Spartan", "Spartan", "Segoe UI", "Roboto", sans-serif;
   background-color: #0c0729;
   color: #e6e6e6;
   font-weight: 600;
